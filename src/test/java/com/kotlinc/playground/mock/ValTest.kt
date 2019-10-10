@@ -10,11 +10,7 @@ import org.junit.Test
  */
 class ValTest {
 
-    val easy : String
-
-    init {
-        easy = mock(String::class.java)
-    }
+    val easy : String = mock(String::class.java)
 
     @Test
     fun test() {
