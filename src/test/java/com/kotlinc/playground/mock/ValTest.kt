@@ -1,18 +1,19 @@
-package com.kotlinc.playground
+package com.kotlinc.playground.mock
 
 import org.junit.Assert.assertNotNull
 import org.mockito.Mockito.mock
 import org.junit.Assert.assertTrue
-import org.junit.Before
 import org.junit.Test
 
-class EasyTest2 {
+/**
+ * This test may leak the state
+ */
+class ValTest {
 
-    lateinit var easy : Easy
+    val easy : String
 
-    @Before
-    fun setUp() {
-        easy = mock(Easy::class.java)
+    init {
+        easy = mock(String::class.java)
     }
 
     @Test

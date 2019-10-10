@@ -1,4 +1,4 @@
-package com.kotlinc.playground
+package com.kotlinc.playground.mock
 
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertTrue
@@ -7,10 +7,13 @@ import org.junit.Test
 import org.mockito.Mock
 import org.mockito.MockitoAnnotations
 
-class EasyTest4 {
+/**
+ * This test uses @Mock and lateinit
+ */
+class MockedTest {
 
     @Mock
-    lateinit var easy : Easy
+    lateinit var easy : String
 
     @Before
     fun setUp() {

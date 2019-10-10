@@ -1,16 +1,21 @@
-package com.kotlinc.playground
+package com.kotlinc.playground.mock
 
 import org.junit.Assert.assertNotNull
 import org.mockito.Mockito.mock
 import org.junit.Assert.assertTrue
+import org.junit.Before
 import org.junit.Test
 
-class EasyTest {
+/**
+ * This test uses lateinit
+ */
+class VarTest {
 
-    val easy : Easy
+    lateinit var easy : String
 
-    init {
-        easy = mock(Easy::class.java)
+    @Before
+    fun setUp() {
+        easy = mock(String::class.java)
     }
 
     @Test

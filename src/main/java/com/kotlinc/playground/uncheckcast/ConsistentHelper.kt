@@ -1,4 +1,4 @@
-package com.kotlinc.playground
+package com.kotlinc.playground.uncheckcast
 
 private inline fun <reified T> genericCastOrNull(anything: Any?): T? {
     return anything as? T
