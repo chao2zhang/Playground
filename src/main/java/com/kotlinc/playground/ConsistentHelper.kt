@@ -1,5 +1,9 @@
 package com.kotlinc.playground
 
+private inline fun <reified T> genericCastOrNull(anything: Any?): T? {
+    return anything as? T
+}
+
 class ConsistentHelper<M : DataTemplate<M>> {
 
     private val listObserver = object : ListUpdateCallback {
@@ -13,7 +17,7 @@ class ConsistentHelper<M : DataTemplate<M>> {
         }
 
         override fun onChanged(position: Int, count: Int, payload: Any?) {
-            val model = (payload as DiffPayload<M>).getItem(position) ?: return
+            val model = genericCastOrNull<DiffPayload<M>>(payload)?.getItem(position) ?: return
             println(model.id())
         }
     }
