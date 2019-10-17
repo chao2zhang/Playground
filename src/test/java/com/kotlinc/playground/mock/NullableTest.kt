@@ -1,23 +1,21 @@
 package com.kotlinc.playground.mock
 
 import org.junit.Assert.assertNotNull
+import org.mockito.Mockito.mock
 import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
-import org.mockito.Mock
-import org.mockito.MockitoAnnotations
 
 /**
- * This test uses @Mock and lateinit
+ * This test uses nullable
  */
-class MockedTest {
+class NullableTest {
 
-    @Mock
-    lateinit var easy : String
+    var easy : String? = null
 
     @Before
     fun setUp() {
-        MockitoAnnotations.initMocks(this)
+        easy = mock(String::class.java)
     }
 
     @Test

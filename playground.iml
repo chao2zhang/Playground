@@ -81,6 +81,17 @@
     <orderEntry type="module-library" scope="TEST">
       <library>
         <CLASSES>
+          <root url="jar:///Users/cazhang/.gradle/caches/modules-2/files-2.1/com.nhaarman.mockitokotlin2/mockito-kotlin/2.2.0/53138f767943304a290855cf1d8b60fc6d1c4bbe/mockito-kotlin-2.2.0.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///Users/cazhang/.gradle/caches/modules-2/files-2.1/com.nhaarman.mockitokotlin2/mockito-kotlin/2.2.0/6d4ff69ce4e3f12a5de16b53c49de003fbe670bf/mockito-kotlin-2.2.0-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" scope="TEST">
+      <library>
+        <CLASSES>
           <root url="jar:///Users/cazhang/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/2.25.0/1fcf2f6944d69b6f39cd579718d8b5395a97836b/mockito-core-2.25.0.jar!/"/>
         </CLASSES>
         <JAVADOC/>
