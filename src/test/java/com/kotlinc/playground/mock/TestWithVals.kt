@@ -1,21 +1,20 @@
 package com.kotlinc.playground.mock
 
-import com.nhaarman.mockitokotlin2.doReturn
-import com.nhaarman.mockitokotlin2.mock
 import org.junit.Assert
 import org.junit.Test
+import org.mockito.Mockito.mock
+import com.nhaarman.mockitokotlin2.whenever
 
 /**
- * This test uses val with mockito-kotlin
+ * This test uses val without mockito-kotlin
  */
 class TestWithVals {
 
-    private val userManager = mock<UserManager> {
-        on {getUserName(1)} doReturn  "U"
+    private val userManager = mock(UserManager::class.java).apply {
+        whenever(getUserName(1)).thenReturn("U")
     }
-    private val networkManager = mock<NetworkManager> {
-        on {fetchFeed(1)} doReturn listOf("A", "B", "D", "C")
-
+    private val networkManager = mock(NetworkManager::class.java).apply{
+        whenever(fetchFeed(1)).thenReturn(listOf("A", "B", "D", "C"))
     }
     private val application: Application = Application(userManager, networkManager)
 
