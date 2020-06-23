@@ -9,7 +9,7 @@ import org.mockito.Mockito.mock
 /**
  * This test uses lateinit vars
  */
-class TestWithVars {
+class TestWithVals3 {
 
     lateinit var userManager: UserManager
     lateinit var networkManager: NetworkManager

@@ -1,22 +1,17 @@
 package com.kotlinc.playground.assertions;
 
-import java.util.ArrayList;
-import java.util.List;
+import org.jetbrains.annotations.Nullable;
 
 
 public class ConnectionManager {
 
-  public List<String> getConnections(int i) {
-    List<String> array = new ArrayList<>();
-    for (int j = 0; j < i; j++) {
-      array.add("Int" + j);
+  @Nullable
+  public Connection connection(int i) {
+    if (i == 1) {
+      return null;
+    } else {
+      return new Connection(i);
     }
-    return array;
-  }
 
-  public String T somethod() {
-    T object = new String();
-    return T;
   }
-
 }

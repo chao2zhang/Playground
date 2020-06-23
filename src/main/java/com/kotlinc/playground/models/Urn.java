@@ -2,13 +2,9 @@ package com.kotlinc.playground.models;
 
 public class Urn {
 
-  private int connection;
+  public static Urn DEFAULT;
 
-  public Url(int i) {
-    connection = i;
-  }
+  public Urn(String str) {
 
-  public int getConnection() {
-    return connection;
   }
 }

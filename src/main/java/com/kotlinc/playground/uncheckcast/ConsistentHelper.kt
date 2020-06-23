@@ -16,9 +16,19 @@ class ConsistentHelper<M : DataTemplate<M>> {
         override fun onInserted(position: Int, count: Int) {
         }
 
-        override fun onChanged(position: Int, count: Int, payload: Any?) {
+        override fun onChanged(position: Int,
+                               count: Int,
+                               payload: Any?) {
             val model = genericCastOrNull<DiffPayload<M>>(payload)?.getItem(position) ?: return
             println(model.id())
+
+            payload?.let {  }
+
+            val i = 5
+            when (i) {
+                5 -> 3
+                else -> {}
+            }
         }
     }
 }
